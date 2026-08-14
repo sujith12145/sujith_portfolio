@@ -1,9 +1,8 @@
 import { useTexture } from '@react-three/drei'
 import * as THREE from 'three'
 
-export default function Walls(props)
-{  
-    const [wallExtTexture, wallInTexture ] = useTexture(['./Textures/WallExt.jpg', './Textures/WallIn.jpg'])
+export default function Walls(props) {
+    const [wallExtTexture, wallInTexture] = useTexture(['./Textures/WallExt.jpg', './Textures/WallIn.jpg'])
 
     return <>
         <mesh
@@ -11,7 +10,7 @@ export default function Walls(props)
             position={[-0.006, 1.6, -4.011]}
             rotation={[0, 1.571, 0]}
         >
-            <meshBasicMaterial map={wallExtTexture} map-flipY={false} side={ THREE.DoubleSide } />
+            <meshBasicMaterial map={wallExtTexture} map-flipY={false} side={THREE.DoubleSide} />
         </mesh>
 
         <mesh
@@ -23,6 +22,6 @@ export default function Walls(props)
 
     </>
 
-    
-    
+
+
 }

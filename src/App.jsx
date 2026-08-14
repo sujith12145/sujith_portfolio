@@ -6,6 +6,7 @@ import CameraScroll from './Components/CameraScroll.jsx'
 
 import "./App.css";
 import ScrollHelper from "./Components/ScrollHelper.jsx";
+import { profile } from "./data/profile.js";
 
 export default function App() {
 
@@ -19,15 +20,39 @@ export default function App() {
       <Sky sunPosition={[1, 0.1, 1]}/>
       
       <Float rotationIntensity={0.9}>
+        <group>
           <Text
             font="./fonts/font.ttf"
             position-y={ 15 }
             rotation-y={ 0.48 * Math.PI }
             curveRadius={ -50 }
-            fontSize={ 5 }
+            fontSize={ 3.8 }
           >
-            Maxime's World
-        </Text>
+            {profile.name}
+          </Text>
+          <Text
+            font="./fonts/font.ttf"
+            position-y={ 11.8 }
+            rotation-y={ 0.48 * Math.PI }
+            curveRadius={ -50 }
+            fontSize={ 1.2 }
+            color="#ffeaa7"
+          >
+            {profile.subtitle}
+          </Text>
+          <Text
+            font="./fonts/font.ttf"
+            position-y={ 9.8 }
+            rotation-y={ 0.48 * Math.PI }
+            curveRadius={ -50 }
+            fontSize={ 0.6 }
+            maxWidth={ 20 }
+            color="#dfe6e9"
+            textAlign="center"
+          >
+            {profile.shortIntro}
+          </Text>
+        </group>
       </Float>
 
       <Scene nodes= { nodes }/>
